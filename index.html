@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read more</title>
+</head>
+
+<body>
+    <p id="slowLoris">
+        Slow lorises are a group of several species of strepsirrhine primates which make up the genus Nycticebus.
+        <a href="javascript:void(0);" onClick="expandLoris();"><em>Click for more.</em></a>
+    </p>
+
+    <script>
+        function expandLoris() {
+            var expandedParagraph = "Slow lorises are a group of several species of trepsirrhine primates which make up the genus Nycticebus. They have a round head, narrow snout, large eyes, and a variety of distinctive coloration patterns that are species-dependent. The hands and feet of slow lorises have several adaptations that give them a pincer-like grip and enable them to grasp branches for long periods of time. Slow lorises have a toxic bite, a rare trait among mammals,";
+            var button = document.createElement("button");
+            button.textContent = "less";
+
+            document.getElementById("slowLoris").innerHTML = expandedParagraph;
+
+            button.addEventListener("click", function () {
+
+                var lessParagraph = "Slow lorises are a group of several species of trepsirrhine primates which make up the genus Nycticebus.";
+                document.getElementById("slowLoris").innerText = lessParagraph
+                console.log("Button clicked!");
+            });
+
+            // Append the button to the document body or any other desired element
+            document.body.appendChild(button);
+
+            document.body.appendChild(button);
+        }
+
+    </script>
+</body>
+
+</html>
